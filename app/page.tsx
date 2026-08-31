@@ -4,6 +4,7 @@ import { useState } from "react";
 
 const PHONE_DISPLAY = "+7 (831) 281-80-51";
 const PHONE_LINK = "tel:+78312818051";
+const BOOKING_URL = "https://n1579356.yclients.com/";
 
 const serviceCards = [
   {
@@ -12,7 +13,7 @@ const serviceCards = [
     title: "Замена масла в двигателе",
     text: "Подберём масло и фильтр по автомобилю, заранее посчитаем материалы и работу.",
     meta: "Работа — от 550 ₽",
-    href: "#calculator",
+    href: "#booking",
   },
   {
     number: "02",
@@ -49,7 +50,7 @@ const workExamples = [
 ];
 
 const faqs = [
-  ["Сколько стоит замена масла в двигателе?", "Работа начинается от 550 ₽. Итоговая сумма зависит от выбранного масла, объёма системы и фильтра. Оставьте данные автомобиля — мы заранее рассчитаем полную стоимость."],
+  ["Сколько стоит замена масла в двигателе?", "Работа начинается от 550 ₽. Итоговая сумма зависит от выбранного масла, объёма системы и фильтра. Запишитесь онлайн, а специалист подтвердит состав работ и точную стоимость для вашего автомобиля."],
   ["Как понять, какое масло подходит моему автомобилю?", "Сообщите марку, модель, год, двигатель или VIN. Специалист проверит вязкость и допуски производителя, а затем предложит подходящие варианты из наличия."],
   ["Чем аппаратная замена в АКПП отличается от частичной?", "При частичной замене обновляется только часть жидкости. Аппаратная позволяет заменить основной объём. Способ выбирают с учётом типа коробки, пробега, состояния жидкости и рекомендаций производителя."],
   ["Нужно ли привозить своё масло и фильтры?", "Необязательно. При сервисе работает собственный магазин с моторными и трансмиссионными маслами, фильтрами и техническими жидкостями."],
@@ -58,7 +59,6 @@ const faqs = [
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
 
   return (
     <main>
@@ -95,7 +95,15 @@ export default function Home() {
             <span>Ежедневно 08:00–20:00</span>
             <a href={PHONE_LINK}>{PHONE_DISPLAY}</a>
           </div>
-          <a className="button button-small" href="#calculator">Записаться</a>
+          <a
+            className="button button-small"
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-metrika-goal="yclients_booking"
+          >
+            Записаться
+          </a>
         </div>
       </header>
 
@@ -112,8 +120,14 @@ export default function Home() {
               Подберём масло и фильтры для вашего автомобиля, рассчитаем стоимость и сразу заменим всё в собственной мастерской.
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#calculator">
-                Рассчитать стоимость <span aria-hidden="true">→</span>
+              <a
+                className="button button-primary"
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-metrika-goal="yclients_booking"
+              >
+                Записаться онлайн <span aria-hidden="true">→</span>
               </a>
               <a className="button button-ghost" href={PHONE_LINK}>Позвонить</a>
             </div>
@@ -152,7 +166,7 @@ export default function Home() {
               <h2>Всё для замены масла<br />в одном месте</h2>
             </div>
             <p>
-              Не нужно искать расходники по разным магазинам. Сообщите данные автомобиля — мы проверим допуски, наличие и подготовим всё к вашему приезду.
+              Не нужно искать расходники по разным магазинам. Запишитесь на удобное время — мы проверим допуски, наличие и подготовим всё к вашему приезду.
             </p>
           </div>
 
@@ -172,7 +186,7 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <p className="price-note">Цены на работы взяты из действующей карточки организации и будут уточнены перед запуском.</p>
+          <p className="price-note">Стоимость расходных материалов зависит от автомобиля. Точную сумму подтвердит специалист перед началом работ.</p>
         </div>
       </section>
 
@@ -197,7 +211,15 @@ export default function Home() {
               <span>Масляные фильтры</span><span>Фильтры АКПП</span>
               <span>Антифризы</span><span>Автохимия</span>
             </div>
-            <a className="text-link" href="#calculator">Подобрать масло и фильтры <span>→</span></a>
+            <a
+              className="text-link"
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-metrika-goal="yclients_booking"
+            >
+              Записаться на замену <span>→</span>
+            </a>
           </div>
         </div>
       </section>
@@ -212,7 +234,15 @@ export default function Home() {
                 Не назначаем аппаратную замену всем подряд. Мастер учитывает тип коробки, пробег, состояние жидкости и рекомендации производителя — после этого предлагает подходящий способ обслуживания.
               </p>
               <div className="akpp-actions">
-                <a className="button button-primary" href="#calculator">Рассчитать замену <span>→</span></a>
+                <a
+                  className="button button-primary"
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-metrika-goal="yclients_booking"
+                >
+                  Записаться онлайн <span>→</span>
+                </a>
                 <span className="akpp-price">Работа — от <strong>3 000 ₽</strong></span>
               </div>
             </div>
@@ -240,15 +270,15 @@ export default function Home() {
       <section className="section process-section">
         <div className="container">
           <div className="section-heading centered-heading">
-            <p className="eyebrow">Как всё происходит</p>
-            <h2>От данных автомобиля<br />до готовой работы</h2>
+            <p className="eyebrow">Как записаться онлайн</p>
+            <h2>От выбора услуги<br />до визита в сервис</h2>
           </div>
           <div className="process-grid">
             {[
-              ["01", "Сообщаете автомобиль", "Марка, модель, год, двигатель или VIN."],
-              ["02", "Получаете расчёт", "Проверяем допуски, наличие и стоимость."],
-              ["03", "Выбираете время", "Резервируем материалы и пост мастера."],
-              ["04", "Приезжаете на замену", "Без поездок по магазинам и лишнего ожидания."],
+              ["01", "Открываете запись", "Переходите в Yclients по кнопке на сайте."],
+              ["02", "Выбираете услугу", "Находите нужный вид обслуживания автомобиля."],
+              ["03", "Выбираете время", "Смотрите актуальные свободные даты и часы."],
+              ["04", "Приезжаете в сервис", "В назначенное время всё будет готово к вашему визиту."],
             ].map(([number, title, text]) => (
               <article className="process-step" key={number}>
                 <span>{number}</span>
@@ -260,52 +290,49 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="calculator-section" id="calculator">
-        <div className="container calculator-layout">
-          <div className="calculator-copy">
-            <p className="eyebrow">Расчёт до приезда</p>
-            <h2>Узнайте стоимость масла, фильтров и работы</h2>
-            <p>Заполните несколько полей. Специалист проверит наличие материалов и подготовит расчёт для вашего автомобиля.</p>
-            <div className="calculator-promise">
-              <span>01</span><p><strong>Без обязательств</strong> — сначала получите расчёт</p>
-              <span>02</span><p><strong>Без спама</strong> — только по вашей заявке</p>
-              <span>03</span><p><strong>Без сюрпризов</strong> — согласуем материалы заранее</p>
+      <section className="booking-section" id="booking">
+        <div className="container booking-layout">
+          <div className="booking-copy">
+            <p className="eyebrow">Онлайн-запись в сервис</p>
+            <h2>Выберите услугу и удобное время</h2>
+            <p>Запишитесь самостоятельно — без звонков и ожидания ответа. В Yclients отображаются доступные услуги, даты и свободное время.</p>
+            <div className="booking-benefits" aria-label="Преимущества онлайн-записи">
+              <article>
+                <span aria-hidden="true">✓</span>
+                <div><strong>Актуальное расписание</strong><p>Свободные даты и время доступны онлайн.</p></div>
+              </article>
+              <article>
+                <span aria-hidden="true">✓</span>
+                <div><strong>Подтверждение записи</strong><p>Данные о визите сохраняются в Yclients.</p></div>
+              </article>
+              <article>
+                <span aria-hidden="true">✓</span>
+                <div><strong>Удобное время</strong><p>Выберите подходящее окно самостоятельно.</p></div>
+              </article>
             </div>
           </div>
-          {submitted ? (
-            <div className="success-card" role="status">
-              <span>✓</span>
-              <h3>Форма работает</h3>
-              <p>Это интерактивный прототип, поэтому заявка никуда не отправлена. После подключения формы здесь будет подтверждение записи.</p>
-              <button type="button" className="button button-primary" onClick={() => setSubmitted(false)}>Заполнить ещё раз</button>
+          <div className="booking-card">
+            <div className="booking-card-head">
+              <span><i aria-hidden="true" /> Онлайн-запись</span>
+              <small>1–2 минуты</small>
             </div>
-          ) : (
-            <form className="calculator-form" onSubmit={(event) => { event.preventDefault(); setSubmitted(true); }}>
-              <div className="form-head">
-                <strong>Данные автомобиля</strong>
-                <span>1–2 минуты</span>
-              </div>
-              <div className="form-grid">
-                <label><span>Марка автомобиля</span><input name="brand" placeholder="Например, Kia" required /></label>
-                <label><span>Модель</span><input name="model" placeholder="Например, Sportage" required /></label>
-                <label><span>Год выпуска</span><input name="year" inputMode="numeric" placeholder="2019" /></label>
-                <label><span>Двигатель или VIN</span><input name="engine" placeholder="2.0 или VIN" /></label>
-                <label className="wide"><span>Какая услуга нужна</span>
-                  <select name="service" defaultValue="engine">
-                    <option value="engine">Замена масла в двигателе</option>
-                    <option value="akpp">Замена масла в АКПП</option>
-                    <option value="cvt">Замена масла в вариаторе CVT</option>
-                    <option value="dsg">Замена масла в DSG</option>
-                    <option value="other">Нужна помощь специалиста</option>
-                  </select>
-                </label>
-                <label className="wide"><span>Телефон</span><input name="phone" type="tel" placeholder="+7 ___ ___-__-__" required /></label>
-              </div>
-              <label className="consent"><input type="checkbox" required /> <span>Согласен на обработку данных для расчёта и обратного звонка</span></label>
-              <button className="button button-primary form-submit" type="submit">Получить расчёт <span>→</span></button>
-              <p className="prototype-note">Демо-форма: в прототипе данные не отправляются.</p>
-            </form>
-          )}
+            <h3>Запись займёт всего несколько шагов</h3>
+            <ol>
+              <li><span>1</span><p><strong>Выберите услугу</strong><small>Найдите нужный вид обслуживания.</small></p></li>
+              <li><span>2</span><p><strong>Укажите дату и время</strong><small>Yclients покажет свободные варианты.</small></p></li>
+              <li><span>3</span><p><strong>Подтвердите запись</strong><small>Оставьте контактный номер для связи.</small></p></li>
+            </ol>
+            <a
+              className="button button-primary booking-button"
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-metrika-goal="yclients_booking"
+            >
+              Записаться в сервис <span aria-hidden="true">→</span>
+            </a>
+            <p className="booking-note">Откроется защищённая страница онлайн-записи Yclients.</p>
+          </div>
         </div>
       </section>
 
@@ -402,12 +429,20 @@ export default function Home() {
           <p>Магазин автомасел и собственная мастерская в Кстово.</p>
           <a href={PHONE_LINK}>{PHONE_DISPLAY}</a>
         </div>
-        <div className="container footer-bottom"><span>© Автомаслоф, 2026</span><span>Прототип сайта · цены уточняются перед запуском</span><a href="#">Политика конфиденциальности</a></div>
+        <div className="container footer-bottom"><span>© Автомаслоф, 2026</span><span>Магазин автомасел и сервис в Кстово</span><a href="#">Политика конфиденциальности</a></div>
       </footer>
 
       <div className="mobile-action-bar" aria-label="Быстрые действия">
         <a href={PHONE_LINK}>Позвонить</a>
-        <a className="primary" href="#calculator">Рассчитать</a>
+        <a
+          className="primary"
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-metrika-goal="yclients_booking"
+        >
+          Записаться
+        </a>
         <a href="https://yandex.ru/maps/org/avtomaslof/189552853411/" target="_blank" rel="noreferrer">Маршрут</a>
       </div>
     </main>

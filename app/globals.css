@@ -98,7 +98,7 @@ button, input, select, textarea { font: inherit; }
 .store-badge { position: absolute; z-index: 2; left: 28px; right: 28px; bottom: 26px; display: flex; align-items: center; justify-content: space-between; gap: 24px; color: #fff; }
 .store-badge strong { font-family: var(--font-display), sans-serif; font-size: 25px; font-weight: 400; text-transform: uppercase; }
 .store-badge span { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
-.store-copy h2, .calculator-copy h2, .contacts-copy h2 { margin: 0; font-family: var(--font-display), sans-serif; font-size: clamp(38px, 4vw, 58px); font-weight: 400; line-height: 1.04; letter-spacing: -.03em; text-transform: uppercase; }
+.store-copy h2, .booking-copy h2, .contacts-copy h2 { margin: 0; font-family: var(--font-display), sans-serif; font-size: clamp(38px, 4vw, 58px); font-weight: 400; line-height: 1.04; letter-spacing: -.03em; text-transform: uppercase; }
 .store-lead { margin: 28px 0 0; color: var(--muted); font-size: 16px; line-height: 1.75; }
 .category-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 24px; margin: 34px 0 28px; border-top: 1px solid var(--line); }
 .category-list span { padding: 15px 0; border-bottom: 1px solid var(--line); font-size: 12px; font-weight: 800; }
@@ -131,31 +131,29 @@ button, input, select, textarea { font: inherit; }
 .process-step h3 { margin: 62px 0 12px; font-size: 18px; }
 .process-step p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.65; }
 
-.calculator-section { padding: 110px 0; background: #242720; color: #fff; }
-.calculator-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 90px; align-items: start; }
-.calculator-copy > p:not(.eyebrow) { max-width: 470px; margin: 25px 0 0; color: #b9bdb3; font-size: 15px; line-height: 1.75; }
-.calculator-promise { display: grid; grid-template-columns: 34px 1fr; gap: 16px 12px; margin-top: 42px; }
-.calculator-promise > span { width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid #4d5048; border-radius: 50%; color: var(--acid); font-size: 8px; }
-.calculator-promise p { margin: 3px 0 0; color: #aeb2a8; font-size: 12px; }
-.calculator-promise strong { color: #fff; }
-.calculator-form, .success-card { padding: 38px; border-radius: 20px; background: #fff; color: var(--ink); box-shadow: 0 24px 70px rgba(0,0,0,.22); }
-.form-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
-.form-head strong { font-size: 20px; }
-.form-head span { padding: 6px 9px; border-radius: 999px; background: #f0eee6; color: #73766d; font-size: 9px; font-weight: 800; }
-.form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 17px; }
-.form-grid label { display: grid; gap: 7px; }
-.form-grid label > span { color: #6e7168; font-size: 10px; font-weight: 800; }
-.form-grid .wide { grid-column: 1 / -1; }
-.form-grid input, .form-grid select { width: 100%; min-height: 50px; padding: 0 14px; border: 1px solid #d8d5cb; border-radius: 8px; outline: none; background: #fbfaf6; font-size: 13px; }
-.form-grid input:focus, .form-grid select:focus { border-color: var(--acid-deep); box-shadow: 0 0 0 3px rgba(245,201,68,.18); }
-.consent { display: flex; gap: 9px; align-items: flex-start; margin-top: 20px; color: #74776e; font-size: 9px; line-height: 1.45; }
-.consent input { margin-top: 1px; accent-color: var(--acid-deep); }
-.form-submit { width: 100%; margin-top: 19px; }
-.prototype-note { margin: 10px 0 0; text-align: center; color: #8d9087; font-size: 9px; }
-.success-card { min-height: 460px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
-.success-card > span { width: 64px; height: 64px; display: grid; place-items: center; border-radius: 50%; background: var(--acid); font-size: 28px; }
-.success-card h3 { margin: 24px 0 8px; font-size: 28px; }
-.success-card p { max-width: 420px; margin: 0 0 24px; color: var(--muted); font-size: 13px; line-height: 1.65; }
+.booking-section { position: relative; overflow: hidden; padding: 110px 0; background: #242720; color: #fff; }
+.booking-section::before { content: ""; position: absolute; width: 560px; height: 560px; right: -320px; top: -360px; border-radius: 50%; background: var(--acid); filter: blur(100px); opacity: .16; }
+.booking-layout { position: relative; display: grid; grid-template-columns: .9fr 1.1fr; gap: 90px; align-items: center; }
+.booking-copy > p:not(.eyebrow) { max-width: 520px; margin: 25px 0 0; color: #b9bdb3; font-size: 15px; line-height: 1.75; }
+.booking-benefits { display: grid; gap: 16px; margin-top: 38px; }
+.booking-benefits article { display: grid; grid-template-columns: 34px 1fr; gap: 14px; align-items: start; }
+.booking-benefits article > span { width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid #50544b; border-radius: 50%; color: var(--acid); font-size: 12px; font-weight: 900; }
+.booking-benefits strong { display: block; margin-top: 1px; font-size: 13px; }
+.booking-benefits p { margin: 5px 0 0; color: #9fa39a; font-size: 11px; line-height: 1.55; }
+.booking-card { padding: 42px; border-radius: 22px; background: #fff; color: var(--ink); box-shadow: 0 28px 80px rgba(0,0,0,.28); }
+.booking-card-head { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.booking-card-head > span { display: inline-flex; align-items: center; gap: 8px; font-size: 10px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.booking-card-head i { width: 8px; height: 8px; border-radius: 50%; background: #42aa60; box-shadow: 0 0 0 5px rgba(66,170,96,.13); }
+.booking-card-head small { padding: 7px 10px; border-radius: 999px; background: #f0eee6; color: #6f7269; font-size: 9px; font-weight: 800; }
+.booking-card h3 { max-width: 430px; margin: 30px 0 28px; font-size: 28px; line-height: 1.18; letter-spacing: -.035em; }
+.booking-card ol { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; counter-reset: booking-steps; }
+.booking-card li { display: grid; grid-template-columns: 42px 1fr; gap: 15px; align-items: center; min-height: 82px; border-top: 1px solid #e7e4db; }
+.booking-card li > span { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; background: #f2efe5; color: #666960; font-size: 10px; font-weight: 900; }
+.booking-card li p { margin: 0; }
+.booking-card li strong { display: block; font-size: 13px; }
+.booking-card li small { display: block; margin-top: 5px; color: #7c7f76; font-size: 10px; line-height: 1.5; }
+.booking-button { width: 100%; margin-top: 26px; }
+.booking-note { margin: 11px 0 0; text-align: center; color: #868980; font-size: 9px; line-height: 1.5; }
 
 .additional-section { background: #ebe8df; }
 .additional-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 50px; border: 1px solid #d5d2c8; background: #d5d2c8; }
@@ -243,7 +241,7 @@ button, input, select, textarea { font: inherit; }
   .hero-visual { min-height: 420px; }
   .store-layout { gap: 45px; }
   .akpp-copy { padding: 60px 45px; }
-  .calculator-layout { gap: 50px; }
+  .booking-layout { gap: 50px; }
   .works-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -293,11 +291,10 @@ button, input, select, textarea { font: inherit; }
   .process-step:nth-child(2) { border-right: 0; }
   .process-step { min-height: 220px; }
   .process-step h3 { margin-top: 42px; }
-  .calculator-section { padding: 80px 0; }
-  .calculator-layout { grid-template-columns: 1fr; gap: 45px; }
-  .calculator-form, .success-card { padding: 26px 20px; }
-  .form-grid { grid-template-columns: 1fr; }
-  .form-grid .wide { grid-column: auto; }
+  .booking-section { padding: 80px 0; }
+  .booking-layout { grid-template-columns: 1fr; gap: 45px; }
+  .booking-card { padding: 28px 20px; }
+  .booking-card h3 { font-size: 24px; }
   .additional-grid { grid-template-columns: 1fr; }
   .additional-grid article { min-height: 235px; }
   .works-section { padding: 80px 0; }
