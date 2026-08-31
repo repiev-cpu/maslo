@@ -164,19 +164,14 @@ button, input, select, textarea { font: inherit; }
 .additional-grid strong { margin-top: auto; padding-top: 20px; font-size: 12px; }
 
 .works-section { padding: 110px 0; background: var(--ink); color: #fff; }
-.works-heading { display: flex; justify-content: space-between; align-items: end; gap: 40px; }
+.works-heading { display: block; }
 .works-heading > div { max-width: 780px; }
 .works-heading h2 { margin: 0; font-family: var(--font-display), sans-serif; font-size: clamp(38px, 4.4vw, 62px); font-weight: 400; line-height: 1.04; text-transform: uppercase; }
-.works-heading > a { padding-bottom: 7px; border-bottom: 1px solid #686c63; color: #d5d8d0; font-size: 11px; font-weight: 800; }
 .works-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 48px; }
 .works-grid article { overflow: hidden; border: 1px solid #3a3d35; border-radius: 15px; background: #20231d; }
-.car-silhouette { position: relative; height: 210px; display: grid; place-items: center; overflow: hidden; background: linear-gradient(145deg, #363a32, #1b1d19); }
-.car-silhouette::before { content: ""; position: absolute; width: 76%; height: 35%; bottom: 45px; border: 2px solid rgba(245,201,68,.22); border-radius: 70px 28px 20px 20px; transform: skewX(-9deg); }
-.car-silhouette::after { content: ""; position: absolute; width: 100%; height: 2px; bottom: 34px; background: rgba(255,255,255,.08); }
-.car-silhouette span { color: rgba(255,255,255,.025); font-family: var(--font-display), sans-serif; font-size: 170px; }
-.car-2 { background: linear-gradient(145deg, #3d392a, #1b1d19); }
-.car-3 { background: linear-gradient(145deg, #2d3537, #1b1d19); }
-.car-4 { background: linear-gradient(145deg, #37312f, #1b1d19); }
+.work-photo { height: 210px; overflow: hidden; background: #292c25; }
+.work-photo img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .35s ease; }
+.works-grid article:hover .work-photo img { transform: scale(1.035); }
 .work-copy { padding: 22px; }
 .work-copy > span { color: var(--acid); font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; }
 .work-copy h3 { margin: 12px 0 7px; font-size: 18px; }
@@ -299,7 +294,6 @@ button, input, select, textarea { font: inherit; }
   .additional-grid article { min-height: 235px; }
   .works-section { padding: 80px 0; }
   .works-heading { display: block; }
-  .works-heading > a { display: inline-block; margin-top: 25px; }
   .works-grid { grid-template-columns: 1fr; }
   .reviews-head { align-items: start; flex-direction: column; }
   .big-rating { text-align: left; }

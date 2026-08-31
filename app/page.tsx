@@ -44,10 +44,10 @@ const additionalServices = [
 ];
 
 const workExamples = [
-  ["Mitsubishi ASX", "Вариатор JF011E", "Аппаратная замена масла"],
-  ["Kia Sportage", "АКПП A6MF1", "Масло + фильтр АКПП"],
-  ["Skoda Octavia A7", "АКПП AQ250", "Полная замена жидкости"],
-  ["Toyota Land Cruiser 200", "АКПП AB60F", "Аппаратная замена масла"],
+  ["Mitsubishi ASX", "Вариатор JF011E", "Аппаратная замена масла", "./images/jf011e-cvt.webp", "Вариатор JF011E для Mitsubishi ASX в автомастерской"],
+  ["Kia Sportage", "АКПП A6MF1", "Масло + фильтр АКПП", "./images/a6mf1-transmission.webp", "Автоматическая коробка A6MF1 для Kia Sportage в автомастерской"],
+  ["Skoda Octavia A7", "АКПП AQ250", "Полная замена жидкости", "./images/aq250-transmission.webp", "Автоматическая коробка AQ250 для Skoda Octavia A7 в автомастерской"],
+  ["Toyota Land Cruiser 200", "АКПП AB60F", "Аппаратная замена масла", "./images/ab60f-transmission.webp", "Автоматическая коробка AB60F для Toyota Land Cruiser 200 в автомастерской"],
 ];
 
 const faqs = [
@@ -365,12 +365,13 @@ export default function Home() {
         <div className="container">
           <div className="works-heading">
             <div><p className="eyebrow">Реальный опыт</p><h2>Работаем с разными коробками и автомобилями</h2></div>
-            <a href="https://maslo-zamena.ru/primery-rabot/" target="_blank" rel="noreferrer">Все примеры работ ↗</a>
           </div>
           <div className="works-grid">
-            {workExamples.map(([model, box, work], index) => (
+            {workExamples.map(([model, box, work, image, imageAlt]) => (
               <article key={model}>
-                <div className={`car-silhouette car-${index + 1}`} aria-hidden="true"><span>{model.charAt(0)}</span></div>
+                <div className="work-photo">
+                  <img src={image} alt={imageAlt} loading="lazy" />
+                </div>
                 <div className="work-copy"><span>{box}</span><h3>{model}</h3><p>{work}</p></div>
               </article>
             ))}
