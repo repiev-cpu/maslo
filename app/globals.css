@@ -64,11 +64,6 @@ button, input, select, textarea { font: inherit; }
 .photo-label { position: absolute; z-index: 2; left: 28px; right: 28px; bottom: 24px; display: flex; justify-content: space-between; align-items: end; gap: 20px; }
 .photo-label span { color: #b9bdb4; font-size: 11px; text-transform: uppercase; letter-spacing: .1em; }
 .photo-label strong { max-width: 220px; text-align: right; font-size: 14px; }
-.rating-card { position: absolute; z-index: 3; left: -34px; bottom: 46px; width: 170px; padding: 20px; border-radius: 14px; background: #fff; color: var(--ink); box-shadow: 0 20px 45px rgba(0,0,0,.3); }
-.rating-score { display: block; font-family: var(--font-display), sans-serif; font-size: 34px; line-height: 1; }
-.rating-stars { display: block; margin: 8px 0; color: #f0b90b; font-size: 13px; letter-spacing: 1px; }
-.rating-card small { display: block; color: #6b6e65; font-size: 9px; line-height: 1.45; }
-
 .proof-strip { border-bottom: 1px solid var(--line); background: var(--acid); }
 .proof-row { display: grid; grid-template-columns: repeat(4, 1fr); }
 .proof-row > div { display: flex; align-items: center; gap: 12px; min-height: 94px; padding: 16px 28px; border-right: 1px solid rgba(21,23,18,.18); }
@@ -246,7 +241,6 @@ button, input, select, textarea { font: inherit; }
   .main-nav { display: none; }
   .hero-layout { grid-template-columns: 1fr .75fr; }
   .hero-visual { min-height: 420px; }
-  .rating-card { left: -20px; }
   .store-layout { gap: 45px; }
   .akpp-copy { padding: 60px 45px; }
   .calculator-layout { gap: 50px; }
@@ -271,7 +265,6 @@ button, input, select, textarea { font: inherit; }
   .hero-actions .button { flex: 1 1 180px; }
   .hero-checks { display: grid; gap: 10px; }
   .hero-visual { min-height: 350px; margin-top: 44px; }
-  .rating-card { left: 14px; bottom: -20px; }
   .photo-label { align-items: start; flex-direction: column; }
   .photo-label strong { text-align: left; }
   .proof-row { grid-template-columns: repeat(2, 1fr); }

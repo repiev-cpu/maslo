@@ -131,11 +131,6 @@ export default function Home() {
                 <strong>Подбор → замена → готово</strong>
               </div>
             </div>
-            <div className="rating-card">
-              <span className="rating-score">5,0</span>
-              <span className="rating-stars" aria-label="5 звёзд">★★★★★</span>
-              <small>297 оценок на Яндекс Картах</small>
-            </div>
           </div>
         </div>
       </section>
