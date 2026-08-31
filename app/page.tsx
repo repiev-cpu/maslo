@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import YandexMetrika from "./yandex-metrika";
 
 const PHONE_DISPLAY = "+7 (831) 281-80-51";
 const PHONE_LINK = "tel:+78312818051";
@@ -62,6 +63,7 @@ export default function Home() {
 
   return (
     <main>
+      <YandexMetrika />
       <header className="site-header">
         <div className="container header-row">
           <a className="brand" href="#top" aria-label="Автомаслоф — на главную">
@@ -93,7 +95,7 @@ export default function Home() {
 
           <div className="header-contact">
             <span>Ежедневно 08:00–20:00</span>
-            <a href={PHONE_LINK}>{PHONE_DISPLAY}</a>
+            <a href={PHONE_LINK} data-metrika-goal="phone_click" data-metrika-placement="header">{PHONE_DISPLAY}</a>
           </div>
           <a
             className="button button-small"
@@ -101,6 +103,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             data-metrika-goal="yclients_booking"
+            data-metrika-placement="header"
           >
             Записаться
           </a>
@@ -126,10 +129,11 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-metrika-goal="yclients_booking"
+                data-metrika-placement="hero"
               >
                 Записаться онлайн <span aria-hidden="true">→</span>
               </a>
-              <a className="button button-ghost" href={PHONE_LINK}>Позвонить</a>
+              <a className="button button-ghost" href={PHONE_LINK} data-metrika-goal="phone_click" data-metrika-placement="hero">Позвонить</a>
             </div>
             <ul className="hero-checks" aria-label="Преимущества">
               <li><span>✓</span> Масла и фильтры в наличии</li>
@@ -217,6 +221,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               data-metrika-goal="yclients_booking"
+              data-metrika-placement="store"
             >
               Записаться на замену <span>→</span>
             </a>
@@ -240,6 +245,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   data-metrika-goal="yclients_booking"
+                  data-metrika-placement="akpp"
                 >
                   Записаться онлайн <span>→</span>
                 </a>
@@ -328,6 +334,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               data-metrika-goal="yclients_booking"
+              data-metrika-placement="booking_section"
             >
               Записаться в сервис <span aria-hidden="true">→</span>
             </a>
@@ -380,14 +387,14 @@ export default function Home() {
           <div className="reviews-grid">
             <blockquote><p>«Быстро подсказали, какое масло подходит, и помогли долить. Спасибо за отзывчивость и внимание».</p><footer><strong>Зоя С.</strong><span>Яндекс Карты</span></footer></blockquote>
             <blockquote><p>«Обслуживаюсь не первый раз. Мастера подробно объясняют, какие детали нужны, цены демократичные, услуги качественные».</p><footer><strong>Наталья Н.</strong><span>Яндекс Карты</span></footer></blockquote>
-            <div className="review-cta"><span>Хорошее место 2026</span><h3>Читайте все отзывы и смотрите реальные фотографии</h3><a href="https://yandex.ru/maps/org/avtomaslof/189552853411/reviews/" target="_blank" rel="noreferrer">Открыть Яндекс Карты ↗</a></div>
+            <div className="review-cta"><span>Хорошее место 2026</span><h3>Читайте все отзывы и смотрите реальные фотографии</h3><a href="https://yandex.ru/maps/org/avtomaslof/189552853411/reviews/" target="_blank" rel="noreferrer" data-metrika-goal="reviews_click" data-metrika-placement="reviews">Открыть Яндекс Карты ↗</a></div>
           </div>
         </div>
       </section>
 
       <section className="section faq-section">
         <div className="container faq-layout">
-          <div className="faq-title"><p className="eyebrow">Вопросы и ответы</p><h2>Что важно знать до приезда</h2><a className="text-link" href={PHONE_LINK}>Задать вопрос по телефону <span>→</span></a></div>
+          <div className="faq-title"><p className="eyebrow">Вопросы и ответы</p><h2>Что важно знать до приезда</h2><a className="text-link" href={PHONE_LINK} data-metrika-goal="phone_click" data-metrika-placement="faq">Задать вопрос по телефону <span>→</span></a></div>
           <div className="faq-list">
             {faqs.map(([question, answer], index) => (
               <details key={question} open={index === 0}>
@@ -405,16 +412,16 @@ export default function Home() {
             <p className="eyebrow">Приезжайте по записи</p>
             <h2>Кстово,<br />Магистральная, 47</h2>
             <div className="contact-lines">
-              <div><span>Телефон</span><a href={PHONE_LINK}>{PHONE_DISPLAY}</a></div>
+              <div><span>Телефон</span><a href={PHONE_LINK} data-metrika-goal="phone_click" data-metrika-placement="contacts">{PHONE_DISPLAY}</a></div>
               <div><span>Режим работы</span><strong>Ежедневно, 08:00–20:00</strong></div>
               <div><span>Ориентир</span><strong>238 м от автостанции Кстово</strong></div>
             </div>
             <div className="contact-actions">
-              <a className="button button-primary" href="https://yandex.ru/maps/org/avtomaslof/189552853411/" target="_blank" rel="noreferrer">Построить маршрут <span>↗</span></a>
-              <a className="button button-dark-ghost" href={PHONE_LINK}>Позвонить</a>
+              <a className="button button-primary" href="https://yandex.ru/maps/org/avtomaslof/189552853411/" target="_blank" rel="noreferrer" data-metrika-goal="route_click" data-metrika-placement="contacts">Построить маршрут <span>↗</span></a>
+              <a className="button button-dark-ghost" href={PHONE_LINK} data-metrika-goal="phone_click" data-metrika-placement="contacts">Позвонить</a>
             </div>
           </div>
-          <a className="map-card" href="https://yandex.ru/maps/org/avtomaslof/189552853411/" target="_blank" rel="noreferrer" aria-label="Открыть Автомаслоф на Яндекс Картах">
+          <a className="map-card" href="https://yandex.ru/maps/org/avtomaslof/189552853411/" target="_blank" rel="noreferrer" aria-label="Открыть Автомаслоф на Яндекс Картах" data-metrika-goal="route_click" data-metrika-placement="map">
             <div className="map-roads" aria-hidden="true" />
             <div className="map-pin"><span>A</span></div>
             <div className="map-label"><strong>Автомаслоф</strong><span>Магазин и сервис</span></div>
@@ -427,23 +434,24 @@ export default function Home() {
         <div className="container footer-top">
           <a className="brand" href="#top"><span className="brand-mark">A</span><span><strong>Автомаслоф</strong><small>экспертный центр замены масла</small></span></a>
           <p>Магазин автомасел и собственная мастерская в Кстово.</p>
-          <a href={PHONE_LINK}>{PHONE_DISPLAY}</a>
+          <a href={PHONE_LINK} data-metrika-goal="phone_click" data-metrika-placement="footer">{PHONE_DISPLAY}</a>
         </div>
         <div className="container footer-bottom"><span>© Автомаслоф, 2026</span><span>Магазин автомасел и сервис в Кстово</span><a href="#">Политика конфиденциальности</a></div>
       </footer>
 
       <div className="mobile-action-bar" aria-label="Быстрые действия">
-        <a href={PHONE_LINK}>Позвонить</a>
+        <a href={PHONE_LINK} data-metrika-goal="phone_click" data-metrika-placement="mobile_bar">Позвонить</a>
         <a
           className="primary"
           href={BOOKING_URL}
           target="_blank"
           rel="noopener noreferrer"
           data-metrika-goal="yclients_booking"
+          data-metrika-placement="mobile_bar"
         >
           Записаться
         </a>
-        <a href="https://yandex.ru/maps/org/avtomaslof/189552853411/" target="_blank" rel="noreferrer">Маршрут</a>
+        <a href="https://yandex.ru/maps/org/avtomaslof/189552853411/" target="_blank" rel="noreferrer" data-metrika-goal="route_click" data-metrika-placement="mobile_bar">Маршрут</a>
       </div>
     </main>
   );

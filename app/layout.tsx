@@ -23,7 +23,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ru">
-      <body className={`${manrope.variable} ${russoOne.variable}`}>{children}</body>
+      <body className={`${manrope.variable} ${russoOne.variable}`}>
+        {children}
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: '<div><img src="https://mc.yandex.ru/watch/112114667" style="position:absolute;left:-9999px" alt="" /></div>',
+          }}
+        />
+      </body>
     </html>
   );
 }
