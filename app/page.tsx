@@ -44,10 +44,10 @@ const additionalServices = [
 ];
 
 const workExamples = [
-  ["Mitsubishi ASX", "Вариатор JF011E", "Аппаратная замена масла", "./images/jf011e-cvt.webp", "Вариатор JF011E для Mitsubishi ASX в автомастерской"],
-  ["Kia Sportage", "АКПП A6MF1", "Масло + фильтр АКПП", "./images/a6mf1-transmission.webp", "Автоматическая коробка A6MF1 для Kia Sportage в автомастерской"],
-  ["Skoda Octavia A7", "АКПП AQ250", "Полная замена жидкости", "./images/aq250-transmission.webp", "Автоматическая коробка AQ250 для Skoda Octavia A7 в автомастерской"],
-  ["Toyota Land Cruiser 200", "АКПП AB60F", "Аппаратная замена масла", "./images/ab60f-transmission.webp", "Автоматическая коробка AB60F для Toyota Land Cruiser 200 в автомастерской"],
+  ["Mitsubishi ASX", "Вариатор JF011E", "Аппаратная замена масла", "./images/mitsubishi-asx-service-bay.webp", "Mitsubishi ASX на обслуживании в сервисном боксе"],
+  ["Kia Sportage", "АКПП A6MF1", "Масло + фильтр АКПП", "./images/kia-sportage-service-bay.webp", "Kia Sportage на обслуживании в сервисном боксе"],
+  ["Skoda Octavia A7", "АКПП AQ250", "Полная замена жидкости", "./images/skoda-octavia-a7-service-bay.webp", "Skoda Octavia A7 на обслуживании в сервисном боксе"],
+  ["Toyota Land Cruiser 200", "АКПП AB60F", "Аппаратная замена масла", "./images/toyota-land-cruiser-200-service-bay.webp", "Toyota Land Cruiser 200 на обслуживании в сервисном боксе"],
 ];
 
 const faqs = [
